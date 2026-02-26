@@ -319,44 +319,74 @@ footer {
 }
 
 
-/* Mobile responsive nav bar */
+/* Desktop nav stays same */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #d4af37;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger icon - hidden on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap; /* allow logo and links to wrap */
-        justify-content: space-between;
-        padding: 10px 0;
-    }
-
-    .logo {
-        flex: 1;
-        font-size: 24px;
-    }
-
     nav ul {
-        flex: 2;
-        display: flex;
-        justify-content: flex-end;
-        gap: 15px;
-        flex-wrap: wrap; /* wrap links if needed */
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li a {
-        font-size: 14px; /* shrink link text for mobile */
-        padding: 5px 8px;
-    }
-
-    .hero {
+        display: none; /* hide links by default */
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px; /* below nav bar */
+        left: 0;
+        padding: 10px 0;
+        gap: 0;
     }
 
-    .hero-image img {
-        width: 70%; /* smaller image for mobile */
-        height: auto;
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* show hamburger icon */
+    }
+
+    nav.active ul {
+        display: flex; /* show links when active */
     }
 }
 
