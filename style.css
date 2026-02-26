@@ -299,7 +299,7 @@ footer {
     }
 }
 
-/* Mobile-friendly Navigation 
+/* Mobile-friendly Navigation */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;   /* stack links vertically */
@@ -317,7 +317,7 @@ footer {
     }
 
 }
-*/
+
 
 /* Responsive nav bar */
 @media (max-width: 768px) {
@@ -355,3 +355,4 @@ footer {
         height: auto;
     }
 }
+
