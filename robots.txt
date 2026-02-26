@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thehan-rajapaksha.github.io/sitemap.xml
