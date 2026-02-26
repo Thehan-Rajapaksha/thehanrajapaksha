@@ -50,7 +50,7 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #d4af37;
+    color: #0f0f0f;
 }
 
 nav ul {
@@ -389,4 +389,5 @@ nav ul li a:hover::after {
         display: flex; /* show links when active */
     }
 }
+
 
